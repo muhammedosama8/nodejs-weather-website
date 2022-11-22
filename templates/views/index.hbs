@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <title>About</title>
+</head>
+<body>
+    <div class="main-content">
+        <h1 >{{title}}</h1>
+        {{>header}}
+
+        <h4 class="title">Search by Location to Get Weather Details</h4>
+        <form>
+            <input type="text" placeholder="Enter Location" />
+            <button>Search</button>
+        </form>
+
+        <div class="weather-details">
+            <p id="temperature"></p>
+            <p id="description"></p>
+        </div>
+    </div>
+
+    
+    {{>footer}}
+    
+    <script src="/js/fetch.js" ></script>
+</body>
+</html>
