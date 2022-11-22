@@ -4,7 +4,7 @@ const path = require('path')
 const hbs = require('hbs')
 const geocode = require('./utils/mapbox')
 const weatherstack = require('./utils/weatherstack')
-
+const port = process.env.PORT || 3000
 const dir = path.join(__dirname, "../public")
 const dirViews = path.join(__dirname,'../templates/views')
 const hbsPath = path.join(__dirname,'../templates/partial')
@@ -54,6 +54,6 @@ app.get('*', (req, res)=> {
         title: "404 error"
     })
 })
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('Server Run!')
 })
